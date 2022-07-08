@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,22 +31,26 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
+  String dataFromFile = "";
+  Future<void> readText() async {
+    final String response = await rootBundle.loadString('assets/chenyn.md');
     setState(() {
-      _counter++;
+      dataFromFile = response;
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    String mdstring = """ 
+    Markdown is the **best**!
+
+    * It has lists.
+    * It has [links - FlutterCampus.com](https://www.fluttercampus.com).
+    * It has _so much more_...
+    """;
+    return Scaffold(
         body: Center(
-      child: Markdown(
-          data: "#我的\n > 他猜想的是：他的项目中有许多`Target`，勾上这个选项，可以让这个组件在需要时被引入。",
-          selectable: true,
-          imageDirectory: 'https://raw.githubusercontent.com'),
+      child: Markdown(data: mdstring, selectable: true),
     ));
   }
 }
