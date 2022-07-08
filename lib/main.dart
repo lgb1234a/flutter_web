@@ -41,16 +41,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    String mdstring = """ 
-    Markdown is the **best**!
-
-    * It has lists.
-    * It has [links - FlutterCampus.com](https://www.fluttercampus.com).
-    * It has _so much more_...
-    """;
     return Scaffold(
         body: Center(
-      child: Markdown(data: mdstring, selectable: true),
+      child: Markdown(data: dataFromFile, selectable: true),
     ));
   }
 }
