@@ -8,21 +8,11 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: '阿勒勒勒勒🐌的博客',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
         primarySwatch: Colors.blue,
       ),
       home: const MyHomePage(title: 'home'),
@@ -53,10 +43,9 @@ class _MyHomePageState extends State<MyHomePage> {
     return const Scaffold(
         body: Center(
       child: Markdown(
-          data: "#我的",
+          data: "#我的\n > 他猜想的是：他的项目中有许多`Target`，勾上这个选项，可以让这个组件在需要时被引入。",
           selectable: true,
           imageDirectory: 'https://raw.githubusercontent.com'),
-    ) // This trailing comma makes auto-formatting nicer for build methods.
-        );
+    ));
   }
 }
