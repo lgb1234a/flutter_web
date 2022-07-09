@@ -33,7 +33,8 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   String dataFromFile = "";
   Future<void> readText() async {
-    final String response = await rootBundle.loadString('assets/chenyn.md');
+    final String response =
+        await rootBundle.loadString('assets/papers/chenyn.txt');
     setState(() {
       dataFromFile = response;
     });
@@ -41,9 +42,13 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    readText();
     return Scaffold(
-        body: Center(
-      child: Markdown(data: dataFromFile, selectable: true),
-    ));
+      body: Markdown(data: dataFromFile, selectable: true),
+      // body: FloatingActionButton(
+      //   onPressed: () => {},
+      //   child: const Image(image: AssetImage('assets/images/setting.png')),
+      // ),
+    );
   }
 }
