@@ -8,18 +8,20 @@ class AuthorInfoPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<HomeCubit, bool>(
       builder: (context, state) {
-        return Container(
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Image.asset(
-                  'assets/images/avatar.png',
-                  width: 120.w,
-                  height: 120.w,
-                )
-              ]),
-        );
+        return Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Image.asset(
+                'assets/images/avatar.png',
+                width: 120.w,
+                height: 120.w,
+              ),
+              FloatingActionButton(
+                onPressed: () => print('---------'),
+                child: const Icon(Icons.add),
+              ),
+            ]);
       },
     );
   }

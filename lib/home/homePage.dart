@@ -16,14 +16,6 @@ class HomePage extends StatelessWidget {
         // ),
         body: Stack(
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                ArticleListPage(),
-                AuthorInfoPage(),
-              ],
-            ),
             Positioned(
                 top: 442.h,
                 left: 1327.w,
@@ -31,7 +23,15 @@ class HomePage extends StatelessWidget {
                   'assets/images/cat.png',
                   width: 711.w,
                   height: 948.h,
-                ))
+                )),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                ArticleListPage(),
+                AuthorInfoPage(),
+              ],
+            )
           ],
         ));
   }
