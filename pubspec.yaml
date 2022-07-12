@@ -34,6 +34,7 @@ dependencies:
   bloc: ^8.0.0
   flutter_bloc: ^8.0.1
   flutter_markdown: ^0.6.10+2
+  flutter_screenutil: ^5.5.3+2
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -65,8 +66,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/papers/chenyn.txt
-    - assets/images/setting.png
-  #   - images/a_dot_ham.jpeg
+    - assets/images/avatar.png
+    - assets/images/cat.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
