@@ -12,11 +12,11 @@ class AuthorInfoPage extends StatelessWidget {
       onPressed: callback,
       tooltip: tip,
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(30.w),
+        borderRadius: BorderRadius.circular(30),
         child: Image.asset(
           iconPath,
-          width: 60.w,
-          height: 60.w,
+          width: 60,
+          height: 60,
         ),
       ),
     );
@@ -31,27 +31,31 @@ class AuthorInfoPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               ClipRRect(
-                borderRadius: BorderRadius.circular(20.w),
+                borderRadius: BorderRadius.circular(20),
                 child: Image.asset(
                   'assets/images/avatar.png',
-                  width: 120.w,
-                  height: 120.w,
+                  width: 120,
+                  height: 120,
                 ),
               ),
+              const Text('阿勒勒勒勒🐌'),
               Container(
-                height: 15,
+                height: 55.h,
               ),
               _createBtn('assets/images/blog.gif', '归档', _clickedCategoryBtn),
               Container(
-                height: 15,
+                height: 35.h,
               ),
               _createBtn(
                   'assets/images/github.gif', 'Github', _clickedGithubBtn),
               Container(
-                height: 15,
+                height: 35.h,
               ),
               _createBtn(
                   'assets/images/linkedin.gif', '简历', _clickedLinkedInBtn),
+              Container(
+                height: 200.h,
+              )
             ]);
       },
     );
