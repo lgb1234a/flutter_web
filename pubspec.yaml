@@ -68,6 +68,10 @@ flutter:
     - assets/papers/chenyn.txt
     - assets/images/avatar.png
     - assets/images/cat.png
+    - assets/images/blog.gif
+    - assets/images/github.gif
+    - assets/images/linkedin.gif
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
