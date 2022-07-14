@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
         body: Stack(
           children: [
             Positioned(
-                top: 442.h,
+                bottom: -309.h,
                 left: 1327.w,
                 child: Image.asset(
                   'assets/images/cat.png',

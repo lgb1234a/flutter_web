@@ -71,8 +71,8 @@ class _AuthorInfoState extends State<AuthorInfoPage> {
                 borderRadius: BorderRadius.circular(20),
                 child: Image.asset(
                   'assets/images/avatar.png',
-                  width: 120,
-                  height: 120,
+                  width: 120.w,
+                  height: 120.w,
                 ),
               ),
               const Text('阿勒勒勒勒🐌'),
